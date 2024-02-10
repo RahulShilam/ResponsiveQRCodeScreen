@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="refresh" content="10" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Responsive QR Code Screen</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+      body {
+        margin: 0;
+      }
+      .main {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(212, 45%, 89%);
+        font-family: "Outfit", sans-serif;
+        overflow: hidden;
+        .main-partition-first {
+          width: 30%;
+        }
+        .main-partition-second {
+          display: flex;
+          justify-content: center;
+          width: 40%;
+        }
+        .main-partition-third {
+          width: 30%;
+        }
+        .cont {
+          width: 60%;
+          height: 100%;
+          padding: 10px;
+
+          border-radius: 5px;
+          background-color: hsl(0, 0%, 100%);
+          text-align: center;
+        }
+        .container {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+        .bold-text {
+          font-weight: 700;
+          text-align: center;
+          margin: 15px 0;
+        }
+        .inner-text {
+          font-size: 10px;
+          font-weight: 400;
+          text-align: center;
+          color: hsl(220, 15%, 55%);
+        }
+
+        @media screen and (max-width: 768px) {
+          .main-partition-first {
+            width: 20%;
+          }
+          .main-partition-second {
+            width: 60%;
+            .cont {
+              width: 100%;
+            }
+          }
+          .main-partition-third {
+            width: 20%;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-partition-first"></div>
+      <div class="main-partition-second">
+        <div class="cont">
+          <img class="container" src="./images/image-qr-code.png" />
+          <div class="bold-text">
+            <div>Improve your front-end</div>
+            <div>skills by building projects</div>
+          </div>
+          <div class="inner-text">
+            <span>Scan the QR code to visit Frontend</span><br />
+            <span>Mentor and take your coding skills to</span><br />
+            <span>the next level</span>
+          </div>
+        </div>
+      </div>
+      <div class="main-partition-third"></div>
+    </div>
+  </body>
+</html>
